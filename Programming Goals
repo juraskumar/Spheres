@@ -1,3 +1,4 @@
+FIRSTLY, GET THE SPHERE GRID AS AN OUTPUT TO SEE
 Moving a single point over the sphere->Given a time t tell me where my point is on the sphere. You are given initial conditions i.e. starting pos and vel on sphere.
 Moving multiple points over the sphere
 Creating a circle on the sphere
