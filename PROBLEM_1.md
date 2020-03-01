@@ -5,7 +5,7 @@
 PROBLEM 1: MOVE A POINT ON THE SPHERE + DISPLAY BACKGROUND GRID IN OUTPUT
 
 IDEAS:
-- fluff(SURAJ)
+- Refer to jupyter file named Frame Fields in the main page. Basis for code 3.
 -
 -
 -
