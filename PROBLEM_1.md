@@ -83,6 +83,7 @@ Li Ting's Code here:
 
 Marcus' Code here:
 _________________________________________________________________________________
+```python
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import random as ran
@@ -115,7 +116,7 @@ z1 = np.cos(v1)
 ax.plot_surface(x1, y1, z1)
 
 plt.show()
-
+```
 _________________________________________________________________________________
 
 
