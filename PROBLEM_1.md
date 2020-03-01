@@ -186,6 +186,76 @@ plt.scatter(c,d,c='blue',s=0.3)
 plt.scatter(e,f,c='blue',s=0.3)
 plt.show()
 ```
+Code 3: Displays a sphere and draws the path of a random point with a random velocity
+```
+import matplotlib.pyplot as plt
+from matplotlib import cm, colors
+from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
+
+    
+
+phi = np.linspace(0, np.pi, 100)
+theta = np.linspace(0, 2*np.pi, 100)
+phi, theta = np.meshgrid(phi, theta)
+
+def gen_normal_vel(r):
+    n=np.random.random(3)
+    n=n-np.dot(n,r)*r
+    m=np.linalg.norm(n)
+    n=n/m
+    b=np.cross(r,n)
+    return np.array([r,n,b])
+def gen_path_from_frame(F,w,ang,dt):
+    ang=ang+w*dt
+    vec=np.array([np.cos(ang),np.sin(ang),0])
+    vec=np.dot(F,vec)
+    return vec,ang
+
+    
+
+# The Cartesian coordinates of the unit sphere
+x = np.sin(phi) * np.cos(theta)
+y = np.sin(phi) * np.sin(theta)
+z = np.cos(phi)
+col=0.45#Change to change color.
+fcolors = np.meshgrid(np.ones(100)*col,np.zeros(100))[0]
+w=1
+N=8000
+ang=0
+dt=0.01
+
+r=np.random.random(3)
+r=r/np.linalg.norm(r)
+F=gen_normal_vel(r)
+X=[r[0]*1.01]
+Y=[r[1]*1.01]
+Z=[r[2]*1.01]
+
+for i in range(N):
+    r,ang=gen_path_from_frame(F,w,ang,dt)
+    X.append(r[0]*1.01)
+    Y.append(r[1]*1.01)
+    Z.append(r[2]*1.01)
+  
+    
+    
+
+
+# Set the aspect ratio to 1 so our sphere looks spherical
+fig = plt.figure(figsize=plt.figaspect(1.)*2)
+ax = fig.add_subplot(111, projection='3d')
+#ax.plot_surface(x, y, z,  rstride=10, cstride=10, facecolors=cm.seismic(fcolors))
+ax.plot(X[1:],Y[1:],Z[1:],'ro',linewidth=0.1)
+ax.plot_wireframe(x, y, z, color="b",linewidth=0.5)
+#Turn off the axis planes
+ax.set_axis_off()
+
+
+
+plt.show()
+
+```
 Geraldine's Code here:
 
 Master Code here:
