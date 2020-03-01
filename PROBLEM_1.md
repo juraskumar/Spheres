@@ -82,6 +82,42 @@ plt.show()
 Li Ting's Code here:
 
 Marcus' Code here:
+_________________________________________________________________________________
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
+import random as ran
+import numpy as np
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+phipre = np.linspace(0, np.pi, 3)
+thetapre = np.linspace(0, 2*np.pi, 2)
+
+phi=(phipre)*(np.random.rand(1,np.size(phipre)))
+theta=(thetapre)*(np.random.rand(1,np.size(thetapre)))
+
+x = (np.outer(np.sin(theta), np.cos(phi)))
+y = (np.outer(np.sin(theta), np.sin(phi)))
+z = (np.outer(np.cos(theta), np.ones_like(phi)))
+
+ax.scatter(x, y, z,s=200, c='r', marker='o')
+
+
+ax = fig.gca(projection='3d')
+
+u1, v1 = np.mgrid[0:2*np.pi:20j, 0:np.pi:20j]
+x1 = np.cos(u1)*np.sin(v1)
+y1 = np.sin(u1)*np.sin(v1)
+z1 = np.cos(v1)
+
+
+ax.plot_surface(x1, y1, z1)
+
+plt.show()
+
+_________________________________________________________________________________
+
 
 Suraj's Code here:
 
