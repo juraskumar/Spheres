@@ -98,7 +98,46 @@ z = np.cos(v)
 ax.plot_wireframe(x, y, z, color="b",linewidth=0.5)
 plt.show()
 ```
+Code 2: Displays Sphere grid and its stereographic projection:
+```
+import numpy as np
+from matplotlib import cm, colors
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
 
+
+
+#This code snippet displays a sphere
+
+# draw sphere
+fig = plt.figure()
+
+fig = plt.figure(figsize=plt.figaspect(1.0)*1.5) 
+ax = fig.gca(projection='3d')
+
+u, v = np.mgrid[0:2*np.pi:2000j, 0:np.pi:1000j]
+x = np.cos(u)*np.sin(v)
+y = np.sin(u)*np.sin(v)
+z = np.cos(v)
+def stereo(x,y,z):
+    c=1/(1.0000000000000001-z)
+    return x+c*(x),y+y*c
+ax.plot_wireframe(x, y, z, color="b",linewidth=0.5)
+plt.show()
+
+figs = plt.figure()
+
+figs = plt.figure(figsize=plt.figaspect(1.0)*1.5) 
+
+
+a, b=stereo(x,y,z)
+c, d=stereo(y,z,x)
+e, f=stereo(z,x,y)
+plt.scatter(a,b,c='blue',s=0.3)
+plt.scatter(c,d,c='blue',s=0.3)
+plt.scatter(e,f,c='blue',s=0.3)
+plt.show()
+```
 Geraldine's Code here:
 
 Master Code here:
