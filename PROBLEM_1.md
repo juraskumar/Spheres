@@ -16,6 +16,9 @@ IDEAS:
 
 
 Julianna's Code here:
+
+https://stackoverflow.com/questions/13901106/plotting-sphere-grid-with-matplotlib-basemap
+
 Code 1: Displays sphere grid
 ```python
 # importing required modules 
