@@ -1,19 +1,33 @@
-FIRSTLY, GET THE SPHERE GRID AS AN OUTPUT TO SEE
-Moving a single point over the sphere->Given a time t tell me where my point is on the sphere. You are given initial conditions i.e. starting pos and vel on sphere.
-Moving multiple points over the sphere
-Creating a circle on the sphere
-Moving a wholeass circle on the sphere
-Changing size of circle as it moves 
-Coming up with a good growth rule
-Checking overlap of circles
-Coming up with collision rules for circles
-Writing the Billiard Collision Algo for a flat surface to understand its performance
-Moving the algo to the sphere
-(Optional) Imaging the circles
+1) Obtain the sphere grid as and output for us to view it 
+
+2) Moving a single point over the sphere
+->Given a time t tell me where my point is on the sphere
+->You are given initial conditions i.e. starting pos and vel on sphere.
+
+3) Moving multiple points over the sphere (extension of (2))
+
+4)Creating a circle on the sphere
+
+5)Moving a wholeass circle on the sphere
+
+6)Changing size of circle as it moves 
+
+7)Coming up with a good growth rule
+
+8)Checking overlap of circles
+
+9)Coming up with collision rules for circles
+
+10)Writing the Billiard Collision Algo for a flat surface to understand its performance
+
+11)Moving the algo to the sphere
+
+12)(Optional) Imaging the circles
 
 
-Stage 1:
-(1)
-(3)
-maybe (9)
-(2)
+Stage 1: (Due Wednesday 4th March)
+1) Obtain the sphere grid as and output for us to view it 
+2) Moving a single point over the sphere
+3) Moving multiple points over the sphere (extension of (2))
+Optional:
+9)Coming up with collision rules for circles
