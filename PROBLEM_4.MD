@@ -21,6 +21,9 @@ from spherical_geometry import polygon
 from spherical_geometry import vector
 radius=np.pi/2 # Radius of circle
 C=polygon.SphericalPolygon.from_cone(vector.vector_to_lonlat(1,0,0)[0],vector.vector_to_lonlat(1,0,0)[1],radius,degrees=False)
+#vector.vector_to_lonlat(1,0,0)[0]: sphericalcoordinates(theta)
+#vector.vector_to_lonlat(1,0,0)[1]: sphericalcoordinates(phi)
+#degrees: degree if true, radian if false
 print(C.area())#Results is area of circle with radius pi/2 which is a hemisphere.
 ```
 Geraldine's Code here:
