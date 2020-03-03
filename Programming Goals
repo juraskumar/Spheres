@@ -26,10 +26,13 @@
 
 
 Stage 1: (Due Wednesday 4th March)
+To do:
 1) Obtain the sphere grid as and output for us to view it 
 2) Moving a single point over the sphere
 3) Moving multiple points over the sphere (extension of (2))
 Optional:
-9)Coming up with collision rules for circles
+10)Writing the Billiard Collision Algo for a flat surface to understand its performance (can reference from CP project)
+4)Creating a circle on the sphere
+
 Non Programmming Goals:
 1) Everyone to write an intro critique, with the exception of the amazing person who offered to start on (10) :)
