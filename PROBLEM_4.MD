@@ -19,9 +19,9 @@ from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 from spherical_geometry import polygon
 from spherical_geometry import vector
-
-C=polygon.SphericalPolygon.from_cone(vector.vector_to_lonlat(1,0,0)[0],vector.vector_to_lonlat(1,0,0)[1],np.pi,degrees=False)
-print(C.area())
+radius=np.pi/2 # Radius of circle
+C=polygon.SphericalPolygon.from_cone(vector.vector_to_lonlat(1,0,0)[0],vector.vector_to_lonlat(1,0,0)[1],radius,degrees=False)
+print(C.area())#Results is area of circle with radius pi/2 which is a hemisphere.
 ```
 Geraldine's Code here:
 
