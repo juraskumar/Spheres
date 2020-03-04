@@ -79,6 +79,80 @@ ax.plot(x,y,z,"o")
 plt.show()
 ```
 
+
+```python
+import matplotlib.pyplot as plt
+from matplotlib import cm, colors
+from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
+
+class path_circle:
+
+    def __init__(self, w, N, ang, dt):
+        
+        #gen_r
+        r=np.random.random(3)
+        r=r/np.linalg.norm(r)
+        self.r = r
+        
+        #gen_normal_vel
+        n=np.random.random(3)
+        n=n-np.dot(n,r)*r
+        m=np.linalg.norm(n)
+        n=n/m
+        b=np.cross(r,n)
+        self.gen_normal_vel = np.array([r,n,b])        
+
+        ang = ang + w * dt
+        vec = np.array([np.cos(ang),np.sin(ang),0])
+        vec = np.dot(self.gen_normal_vel,vec)
+        self.gen_path_from_frame = (vec,ang)
+        
+        X = [self.r[0]*1.01]
+        Y = [self.r[1]*1.01]
+        Z = [self.r[2]*1.01]
+        
+        for i in range(N):
+            r , ang = self.gen_path_from_frame
+            X.append(r[0]*1.01)
+            Y.append(r[1]*1.01)
+            Z.append(r[2]*1.01)
+        self.X = X
+        self.Y = Y
+        self.Z = Z
+
+
+col=0.45#Change to change color.
+fcolors = np.meshgrid(np.ones(100)*col,np.zeros(100))[0]
+
+
+a = path_circle(1, 8000, 0, 0.01)
+X= a.X
+Y= a.Y
+Z= a.Z
+
+phi = np.linspace(0, np.pi, 100)
+theta = np.linspace(0, 2*np.pi, 100)
+    
+#Cartesian Coordinates 
+x = np.sin(phi) * np.cos(theta)
+y = np.sin(phi) * np.sin(theta)
+z = np.cos(phi)
+
+# Set the aspect ratio to 1 so our sphere looks spherical
+fig = plt.figure(figsize=plt.figaspect(1.)*2)
+ax = fig.add_subplot(111, projection='3d')
+#ax.plot_surface(x, y, z,  rstride=10, cstride=10, facecolors=cm.seismic(fcolors))
+ax.plot(X[1:],Y[1:],Z[1:],'ro',linewidth=0.1)
+ax.plot_wireframe(x, y, z, color="b",linewidth=0.5)
+#Turn off the axis planes
+ax.set_axis_off()
+
+
+
+plt.show()
+```
+
 Li Ting's Code here:
 
 Marcus' Code here:
