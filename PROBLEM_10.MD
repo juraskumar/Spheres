@@ -1,7 +1,9 @@
 Enter your codes here:
 
 Suraj's Code:
-```
+
+```python
+
 #ALL IMPORTS HERE
 import math
 import numpy as np
@@ -207,6 +209,7 @@ while(True):
         ax.add_artist(circle1)
     fig.canvas.draw()
     fig.canvas.flush_events()
+
 ```
 
 Master Code:
