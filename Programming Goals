@@ -5,25 +5,25 @@ ALL PROGRAMMING GOALS:
 ->Given a time t tell me where my point is on the sphere
 ->You are given initial conditions i.e. starting pos and vel on sphere.
 
-3) Moving multiple points over the sphere (extension of (2)) 
+3) Moving multiple points over the sphere (extension of (2)) (clear)
 
-4)Creating a circle on the sphere
+4)Creating a circle on the sphere (clear)
 
-5)Moving a whole circle on the sphere
+5)Moving a whole circle on the sphere (clear)
 
-6)Changing size of circle as it moves 
+6)Changing size of circle as it moves (clear)
 
-7)Coming up with a good growth rule (hard)
+7)Coming up with a good growth rule (hard) (semi-clear)
 
-8)Checking overlap of circles
+8)Checking overlap of circles (clear)
 
 9)Coming up with collision rules for circles (hard)
 
-10)Writing the Billiard Collision Algo for a flat surface to understand its performance (can reference from CP project)
+10)Writing the Billiard Collision Algo for a flat surface to understand its performance (can reference from CP project) (clear)
 
-11)Moving the algo to the sphere
+11)Moving the algo to the sphere (semi-clear)
 
-12)(Optional) Imaging the circles
+12)(Optional) Imaging the circles (clear)
 
 
 Stage 1: (Due Wednesday 4th March)
