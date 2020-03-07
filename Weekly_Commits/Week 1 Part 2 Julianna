@@ -35,7 +35,7 @@ print(C.area())#Results is area of circle with radius pi/2 which is a hemisphere
 print(C.points()) #gives you the points on the circle
 ```
 Clearly, the above function is a lifesaver. However, there is a slight issue with the radius. 
-As seen in the figure 'W1P2J', the radius inputted is not nessecarity the arc radius on the sphere. As such, we should input the radius as __ instead of __
+As seen in the figure 'W1P2J', the radius inputted is not nessecarity the arc radius on the sphere. As such, we should input the radius as tan(theta) instead of theta
 
 Another issue is the runtime of the programme. While the runtime is currently at an acceptable speed, it becomes a different story
 when multiple circles are involved. Thus, we decided to use classes to see if it will make it faster.
