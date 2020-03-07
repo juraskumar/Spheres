@@ -61,7 +61,6 @@ class Circle:
         self.area = self.sphere.area
         self.points = self.sphere.points
 
-
 a = Circle(np.pi/2, [1,0,0])
 print(a.area())#Results is area of circle with radius pi/2 which is a hemisphere.
 print(a.points)
