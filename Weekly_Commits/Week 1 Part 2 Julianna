@@ -1,0 +1,70 @@
+PROBLEM 3: CREATE A CIRCLE ON THE SPHERE
+
+When we were tasked to solve problem 3, My initial way to go about it was
+1) Input the centre of the dircle
+2) Draw a circle tangent to the sphere at the predetermined centre 
+3) Find a function to project the circle onto the sphere? 
+
+The issues I faced was
+1) What function does that projection
+2) Calculating the tangent for every single point for multiple circles is time consuming 
+3) The actual radius and the projected radius may defer
+
+While I was thinking about it, Suraj taught us this particular function called polygon.SphericalPolygon.from_cone. This function 
+allows us to create a new SphericalPolygon from a cone (otherwise known as a “small circle”) defined using (ra, dec, radius). In
+other words,
+1) It creates a cone, with the tip of the cone being the centre of the sphere
+2) When the cone intersects with the sphere, the intersection is the 'circle we want'
+
+```python
+#import modules
+import matplotlib.pyplot as plt
+from matplotlib import cm, colors
+from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
+from spherical_geometry import polygon
+from spherical_geometry import vector
+radius=np.pi/2 # Radius of circle
+
+C=polygon.SingleSphericalPolygon.from_cone(vector.vector_to_lonlat(1,0,0)[0],vector.vector_to_lonlat(1,0,0)[1],radius,degrees=False)
+#vector.vector_to_lonlat(1,0,0)[0]: sphericalcoordinates(theta)
+#vector.vector_to_lonlat(1,0,0)[1]: sphericalcoordinates(phi)
+#degrees: degree if true, radian if false
+
+print(C.area())#Results is area of circle with radius pi/2 which is a hemisphere.
+print(C.points()) #gives you the points on the circle
+```
+Clearly, the above function is a lifesaver. However, there is a slight issue with the radius. 
+As seen in the figure 'W1P2J', the radius inputted is not nessecarity the arc radius on the sphere. As such, we should input the radius as __ instead of __
+
+Another issue is the runtime of the programme. While the runtime is currently at an acceptable speed, it becomes a different story
+when multiple circles are involved. Thus, we decided to use classes to see if it will make it faster.
+
+```python
+#import all the modules
+import matplotlib.pyplot as plt
+from matplotlib import cm, colors
+from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
+from spherical_geometry import polygon
+from spherical_geometry import vector
+
+#create the class circle, we can call it to create the circle we want 
+class Circle:
+    def __init__(self, radius, centre): 
+        self.radius = radius
+        self.centre = centre
+        self.sphere = polygon.SingleSphericalPolygon.from_cone(vector.vector_to_lonlat(centre[0],centre[1],centre[2])[0],vector.vector_to_lonlat(centre[0],centre[1],centre[2])[1],radius, degrees=False)
+        #vector.vector_to_lonlat(1,0,0)[0]: sphericalcoordinates(theta)
+        #vector.vector_to_lonlat(1,0,0)[1]: sphericalcoordinates(phi)
+        #degrees: degree if true, radian if false
+        self.area = self.sphere.area
+        self.points = self.sphere.points
+
+
+a = Circle(np.pi/2, [1,0,0])
+print(a.area())#Results is area of circle with radius pi/2 which is a hemisphere.
+print(a.points)
+```
+If you run both codes, you will see that for the first code, the output of the points on the circle is far slower than when classes are used.
+Thus, we have solved the runtime issue.
