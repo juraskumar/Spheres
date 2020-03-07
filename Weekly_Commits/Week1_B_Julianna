@@ -34,6 +34,7 @@ C=polygon.SingleSphericalPolygon.from_cone(vector.vector_to_lonlat(1,0,0)[0],vec
 print(C.area())#Results is area of circle with radius pi/2 which is a hemisphere.
 print(C.points()) #gives you the points on the circle
 ```
+
 Clearly, the above function is a lifesaver. However, there is a slight issue with the radius. 
 As seen in the figure 'W1P2J', the radius inputted is not nessecarity the arc radius on the sphere. As such, we should input the radius as tan(theta) instead of theta
 
