@@ -1,7 +1,7 @@
 PROBLEM 3: CREATE A CIRCLE ON THE SPHERE
 
 When we were tasked to solve problem 3, My initial way to go about it was
-1) Input the centre of the dircle
+1) Input the centre of the circle
 2) Draw a circle tangent to the sphere at the predetermined centre 
 3) Find a function to project the circle onto the sphere? 
 
