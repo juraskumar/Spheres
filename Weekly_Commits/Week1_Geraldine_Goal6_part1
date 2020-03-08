@@ -1,0 +1,21 @@
+(Changing size of a circle without moving yet)
+
+To make the circle bigger as we pack more circles 'grow' close together and make a 'bigger circle'
+aka ' enlarging the shape'
+
+CODE:
+
+
+import numpy as np
+
+#generating a random size of a circle (Example values)
+radius = random.randrange(3, 40)
+x = random.randrange(5, 190)
+y = random.randrange(5, 190)
+
+size1 = np.array(radius,x,y)
+size2 = np.array(radius,x,y)
+
+#compiling 2 circles in arrays both x and y direction
+resize = np.concatenate((size1,size2)) + np.concatenate((size1,size2),axis=1)
+
