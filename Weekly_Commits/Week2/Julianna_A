@@ -1,0 +1,29 @@
+Welcome to Week 2!!!!!
+
+Currently, the billard collision works as such:
+1) Initialise a bunch of circles on the sphere
+2) Give the circles velocity and make them move
+3) As the circles move, their radius slowly increases
+4) Function made to ensure there are no collisons ie, circles are pushed away when there's no collisions
+5) Once circles cant grow larger without overlapping, stop the code and display the packing efficiency.
+
+For this week's commitment, I would like to focus on two things.
+1) The growth rule for the circles
+2) The end condition
+
+Growth rule for circles.
+There are many ways we can code the growth rule for the circles, namely
+1) constant growth rate
+2) collision based
+3) radius based 
+4) exponential based
+5) Inversed power (1/x) based
+4) Combination of the above
+
+The things we need to note are:
+1) If it grows too slowly, we will fall asleep before it ends
+2) If it grows too fast, the packing efficiency may not be as good
+3) If the growth rule is too complicated, the runtime will be too long
+
+Based on the above, I have come up with a few approaches.
+*** As the code is too long, I will be specifying which part of Suraj's code to replace in order to prove my point ***
