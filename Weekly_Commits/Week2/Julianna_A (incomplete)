@@ -31,7 +31,7 @@ Based on the above, I have come up with a few approaches.
 1) We can actually gauge the final packing efficiency on the sphere. Hence, my proposal is to just use a fast growth
 rule till a certain point and switching over to a slower growth rule. 
 Eg: up till the radius reaches x% of the expected radius, use a fast constant growth rate. x is to be determined.
-
+To determine the expected radius, we use n*pi*r^2 = 4*pi*R^2. Thus, r^2 = 4/n
 2) 
 
 
