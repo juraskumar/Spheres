@@ -3,7 +3,7 @@ maximum runtime is 30 mins. Thanks to Clover Consultancy as always.
 
 Code: Click on edit to view code properly. I am a noob
 
-'''
+```python
 
 import matplotlib.pyplot as plt
 from matplotlib import cm, colors
@@ -304,4 +304,4 @@ def theloop(frames=9999999999999999):
 
 theloop()
 
-'''
+```
