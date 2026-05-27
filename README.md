@@ -1,5 +1,5 @@
 # Spheres
-Sci Comm Cum Throne
+Sci Comm Project
 
 Hello frens, welcome to our corner in the GitHub Universe. This repository has been set up to store codes/jupyter notebooks for our Sci Comm project. It is a public repository which means anyone can see stuff, etc. I am hoping no one forks with us. I will have a hard backup on my comm and on the cloud just in case.
 
